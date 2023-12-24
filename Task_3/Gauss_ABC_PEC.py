@@ -165,7 +165,7 @@ if __name__ == '__main__':
 
     # Источник
     magnitude = 1.0
-    signal = Gaussian(1,300,50)
+    signal = Gaussian(1,300,40)
 
     source = Source(signal, 0.0, Sc, eps[sourcePos], mu[sourcePos])
 
@@ -236,7 +236,7 @@ if __name__ == '__main__':
     sp  = np.fft.fft(probes[0].E)
     freq = np.fft.fftfreq(maxTime)
     plt.plot(freq / (dt * 1e9), abs(sp) / max(abs(sp)))
-    plt.xlim(-2.5, 2.5)
+    plt.xlim(0, 2.5)
     plt.grid()
     plt.xlabel('f, ГГц')
     display.stop()
